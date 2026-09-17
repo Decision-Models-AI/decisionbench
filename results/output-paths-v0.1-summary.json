@@ -1,0 +1,65 @@
+{
+  "generated_at": "2026-09-17T17:12:11.888624+00:00",
+  "model": "qwen3:0.6b",
+  "details": {
+    "parent_model": "",
+    "format": "gguf",
+    "family": "qwen3",
+    "families": [
+      "qwen3"
+    ],
+    "parameter_size": "751.63M",
+    "quantization_level": "Q4_K_M"
+  },
+  "inputs": 25,
+  "repeats": 3,
+  "options": [
+    "billing",
+    "technical",
+    "sales",
+    "other"
+  ],
+  "paths": {
+    "generated": {
+      "n": 75,
+      "p50_ms": 97.7,
+      "p95_ms": 106.8,
+      "mean_ms": 99.2,
+      "median_output_tokens": 11,
+      "schema_valid_rate": 1.0
+    },
+    "constrained": {
+      "n": 75,
+      "p50_ms": 74.4,
+      "p95_ms": 79.5,
+      "mean_ms": 76.6,
+      "median_output_tokens": 7,
+      "schema_valid_rate": 1.0
+    },
+    "direct": {
+      "n": 75,
+      "p50_ms": 24.6,
+      "p95_ms": 29.5,
+      "mean_ms": 24.9,
+      "median_output_tokens": 1,
+      "schema_valid_rate": 1.0
+    }
+  },
+  "agreement": {
+    "generated_vs_constrained": {
+      "compared": 25,
+      "agree": 17,
+      "rate": 0.68
+    },
+    "generated_vs_direct": {
+      "compared": 25,
+      "agree": 12,
+      "rate": 0.48
+    },
+    "constrained_vs_direct": {
+      "compared": 25,
+      "agree": 19,
+      "rate": 0.76
+    }
+  }
+}
