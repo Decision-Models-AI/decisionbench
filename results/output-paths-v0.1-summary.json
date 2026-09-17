@@ -61,5 +61,13 @@
       "agree": 19,
       "rate": 0.76
     }
+  },
+  "hardware": {
+    "machine": "MacBook Pro",
+    "chip": "Apple M3 Pro",
+    "cores": "11 (5 performance + 6 efficiency)",
+    "memory": "36 GB unified",
+    "os": "macOS 26.4.1",
+    "runtime": "Ollama 0.33.2"
   }
 }
