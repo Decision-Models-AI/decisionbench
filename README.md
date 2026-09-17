@@ -35,6 +35,25 @@ roughly a quarter to half of the time. Moving a step from generation to direct
 scoring is not a free optimisation; it is a change in behaviour that deserves its own
 evaluation.
 
+### The disagreement is not symmetric
+
+Answer distribution across all 75 calls per path:
+
+| Path | technical | sales | other | billing |
+|---|---|---|---|---|
+| `generated` | 44% | 20% | 32% | 4% |
+| `constrained` | 72% | 16% | 12% | 0% |
+| `direct` | **92%** | 8% | 0% | **0%** |
+
+The direct readout collapsed onto one label and never once answered `billing`, on a
+set that includes *"My card was charged twice for the same order."* and *"Charged in
+USD but our contract says AUD."*
+
+So the fastest path was also the most degenerate. The honest reading is that a 0.6B
+model is not good at this task by any route, and latency measured on a model that is
+answering badly is not latency you can spend. Whether a purpose-trained decision
+model avoids this collapse is the open question, and answering it needs labelled data.
+
 ### What this does not measure
 
 - **Not accuracy.** There are no ground-truth labels. "Disagreement" means the paths
